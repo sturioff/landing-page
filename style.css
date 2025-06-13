@@ -9,7 +9,8 @@
 
 body {
     font-size: 100%;
-    background:#cf1f4f;
+    background:#f0fef0;
+    transition: background 0.5s ease;
 }
 
 .cabecalho {
@@ -18,7 +19,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: #fccdf1;
+    background-color: #402768;
 }
 
 .imagem-cabecalho {
@@ -32,13 +33,14 @@ body {
 
 .cabecalho-menu-item {
      font-family: "Sarala", sans-serif;
-     color: #402768;
+     color: #f0fef0;
      font-weight: 400;
      font-size: 18px;
+     transition: color 0.3s ease;
 }
 
 .cabecalho-menu-item:hover {
-  color: #953b80;
+  color: #ee73d1;
   cursor: pointer;
 }
 
@@ -49,39 +51,50 @@ body {
 
 
 .conteudo {
-    margin-bottom: 48px;
-    border-top: 0.4px solid #fff2e7;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-top: 0.4px solid #f0f0f0;
 }
+
 
 .conteudo-principal {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    animation: fadeIn 0.8s ease-in;
 }
 
 .conteudo-principal-escrito {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 40px;
 }
 
-.conteudo-principal-titulo {
+.titulo-site {
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-size: 64px;
     color: #402768;
 }
 
+.conteudo-principal-titulo-menor {
+    font-family: "Sarala", sans-serif;
+    font-weight: 400;
+    font-size: 44px;
+    color: #cf1f4f;
+;
+}
+
 .conteudo-principal-subtitulo {
      font-family: "Sarala", sans-serif;
      font-weight: 400;
      font-size: 24px;
-     color: #FFFFFF;
+     color: #cf1f4f;
 }
 
 .conteudo-principal-botao {
-    background-color: #FFFFFF;
+    background-color: #402768;
     width: 180px;
     height: 60px;
     border: none;
@@ -90,16 +103,34 @@ body {
     font-family: "Sarala", sans-serif;
     font-weight: 400;
     font-size: 20px;
-    color: #402768;
+    color: #f0fef0;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .conteudo-principal-botao:hover {
-    background-color: #ff8caa;
+    background-color: #ee73d1;
+    transform: scale(1.03);
 }
 
-.conteudo-principal-imagem {
-    height: 430px;
+.imagem-container {
+  position: relative;
+  display: block;
+}
+
+.imagem-triangulo {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  width: 450px;
+  z-index: 0;
+}
+
+.conteudo-principal-imagem{
+  position: relative;
+  z-index: 1;
+  width: 300px;
 }
 
 .conteudo-secundario {
@@ -108,15 +139,16 @@ body {
     align-items: center;
     gap: 24px;
     margin-top: 48px;
+    animation: fadeIn 0.8s ease-in;
 }
 
 .conteudo-secundario-titulo {
-    border-top: 0.4px solid #fff2e7;
+    border-top: 0.4px solid #cf1f4f;
     padding-top: 48px;
     font-family: "Righteous", sans-serif;
     font-weight: 400;
     font-size: 24px;
-    color: #FFF2E7;
+    color: #cf1f4f;
     margin-bottom: 16px;
 }
 
@@ -124,16 +156,65 @@ body {
     font-family: "Sarala", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    color: #ECD6C4;
+    color: #cf1f4f;
 }
 
 .rodape {
-    padding: 32px;
-    border-top: 0.4px solid #FFF2E7;
+  font-family: 'Sarala', sans-serif;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #FFFFFF;
+  background-color: #402768;
+  border-top: 0.4px solid #FFF2E7;
+}
+
+.rodape a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.rodape a:hover {
+  text-decoration: underline;
 }
 
 .rodape-imagem {
     height: 48px;
     display: block;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .conteudo-principal {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .conteudo-principal-imagem {
+    height: 280px;
+    margin-top: 20px;
+  }
+
+  .conteudo-principal-botao {
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+
+  .cabecalho {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cabecalho-menu {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

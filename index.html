@@ -13,7 +13,7 @@
     <header class="cabecalho">
         <a href="/">
         <img class="imagem-cabecalho" src="logo slykar.png" alt="Logo da Slykar" width="100px"></a>
-        <nav class="cabecalho-menu">
+        <nav class="cabecalho-menu" aria-label="Menu principal">
             <a class="cabecalho-menu-item" href="#sobre">Sobre nós</a>
             <a class="cabecalho-menu-item" href="#faq">FAQ</a>
             <a class="cabecalho-menu-item" href="#blog">Blog</a>
@@ -24,11 +24,21 @@
         <main class="conteudo">
         <section class="conteudo-principal">
             <div class="conteudo-principal-escrito">
-                <h1 class="conteudo-principal-titulo">Legendas ao vivo</h1>
+                <h1 class="titulo-site">Slykar</h1>
+                <h2 class="conteudo-principal-titulo-menor">Legendas ao vivo</h2>
                 <h2 class="conteudo-principal-subtitulo">Torne seu evento mais acessível com legendas simultâneas</h2>
+                <a href="/" target="_blank">
                 <button class="conteudo-principal-botao">Demonstração</button>
+</a>
+
+
             </div>
-            <img class="conteudo-principal-imagem" src="imagem celular gradiente.png"" alt="Imagem do celular">
+
+            <div class="imagem-container">
+            <img class="imagem-triangulo" src="triangulo.png" alt="triângulo">
+            <img class="conteudo-principal-imagem" src="imagem celular gradiente.png" alt="imagem do celular">
+            </div>
+
         </section>
 
         <section class="conteudo-secundario">
@@ -39,8 +49,8 @@
         </section>
         </main>
     <!--Rodapé-->
-    <footer style="font-family: 'Sarala', sans-serif; text-align: center; padding: 20px; font-size: 14px; color: #FFFFFF; background-color: #402768;">
-  © 2025 Slykar — Criado por <a href="https://github.com/sturioff" target="_blank" style="color: #FFFFFF; text-decoration: none;">Maria Letícia Sturion</a> |
-  <a href="/politica-de-privacidade.html" style="color: #FFFFFF; text-decoration: none;">Política de Privacidade</a> |
-  <a href="mailto:sturioff@gmail.com" style="color: #FFFFFF; text-decoration: none;">Contato</a>
+<footer class="rodape" aria-label="Rodapé">
+  © 2025 Slykar — Criado por <a href="https://github.com/sturioff" target="_blank">Maria Letícia Sturion</a> |
+  <a href="#politica-de-privacidade.html">Política de Privacidade</a> |
+  <a href="mailto:sturioff@gmail.com">Contato</a>
 </footer>
