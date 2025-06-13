@@ -1,6 +1,9 @@
 # Landing Page
 
-Este é o projeto da minha landing page, criado com HTML, CSS e JavaScript.
+## 📌 Aviso
+
+Este projeto foi desenvolvido exclusivamente para fins de estudo e portfólio.  
+Não possui fins comerciais e não representa nenhuma marca ou empresa real.
 
 ## Como rodar
 
